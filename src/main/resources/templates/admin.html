@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Good Thymes Virtual Grocery</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-group {
+    display: flex;
+    width: 50%;
+    gap: 15px;
+  }
+
+  .article-group div {
+    width: 600px;
+  }
+</style>
+
+<body>
+  <header>
+    <h1>Personal Blog (ADMIN)</h1>
+    <a href="/new">
+      <p> + Add</p>
+    </a>
+  </header>
+
+  <div th:each="article : ${allArticles}" class="article-group">
+    <div th:text="${article.title}"></div>
+
+    <a th:href="@{/edit/{id}(id=${article.id})}"><button>Edit</button></a>
+
+    <form th:action="@{/delete/{id}(id=${article.id})}" method="POST">
+      <button>Delete</button>
+    </form>
+    <br>
+  </div>
+
+</body>
+
+</html>
