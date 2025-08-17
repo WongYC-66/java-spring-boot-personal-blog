@@ -31,7 +31,11 @@ gradle bootRun
 1. login with username : admin, password : password
 
 1. Example:
+   
     ![image1](/image_home.png)
+
     ![image2](/image_login.png)
+
     ![image3](/image_edit.png)
+    
     ![image4](/image_article.png)
