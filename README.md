@@ -4,6 +4,7 @@
 # Feature
 1. Very basic blog-like feature
    - CRUD of blog
+   - data stored at JSON
 2. Very basic Authethentication with default username/password, with spring security
    - http://localhost:8080/  (non-authenticated)
    - http://localhost:8080/home (non-authenticated)
