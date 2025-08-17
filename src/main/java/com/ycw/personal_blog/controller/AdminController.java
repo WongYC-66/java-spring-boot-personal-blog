@@ -1,4 +1,4 @@
-package com.ycw.personal_blog;
+package com.ycw.personal_blog.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ycw.personal_blog.service.ArticleManager;
+import com.ycw.personal_blog.data.Article;
 
 @Controller
 public class AdminController {

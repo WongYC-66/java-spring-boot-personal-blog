@@ -1,4 +1,4 @@
-package com.ycw.personal_blog;
+package com.ycw.personal_blog.data;
 
 import java.time.LocalDateTime;
 

@@ -27,7 +27,9 @@
 
 <body>
   <header>
-    <h1>Personal Blog</h1>
+    <a href="/">
+      <h1>Personal Blog</h1>
+    </a>
   </header>
 
   <div th:each="article : ${allArticles}" th:href="@{/article/{id}(id=${article.id})}" class="article-group">

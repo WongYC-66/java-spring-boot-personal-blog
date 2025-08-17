@@ -1,4 +1,4 @@
-package com.ycw.personal_blog;
+package com.ycw.personal_blog.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.ycw.personal_blog.data.Article;
 
 @Service // singleton
 public class ArticleManager {

@@ -1,9 +1,11 @@
-package com.ycw.personal_blog;
+package com.ycw.personal_blog.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ycw.personal_blog.service.ArticleManager;
 
 @RestController
 public class PublicController {
@@ -15,8 +17,15 @@ public class PublicController {
     }
 
     @GetMapping("/")
-    public String Index() {
-        return "check /hello or /home";
+    public ModelAndView Index() {
+        ModelAndView mav = new ModelAndView("_home");
+        return mav;
+    }
+
+    @GetMapping("/login")
+    public ModelAndView getLogin() {
+        ModelAndView mav = new ModelAndView("login");
+        return mav;
     }
 
     @GetMapping("/home")

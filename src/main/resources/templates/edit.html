@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1>New Article</h1>
+  <h1>Edit Article</h1>
 
   <form th:action="@{/edit/{id}(id=${article.id})}" th:object="${article}" method="post">
     <input type="number" th:field="*{id}" hidden/>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Good Thymes Virtual Grocery</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" media="all" href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1>Welcome</h1>
+    </a>
+  </header>
+
+  <a href="/home">Home</a>
+  <a href="/admin">Admin</a>
+
+  <form th:action="@{/logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Log out</button>
+  </form>
+
+  </div>
+
+</body>
+
+</html>
